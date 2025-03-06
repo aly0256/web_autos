@@ -1,0 +1,963 @@
+/*Resetear valores a toda la página*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+}
+
+/***********************************************************************************************************************************************************************************************************/
+/****************************************************************HEADER*************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+
+/*****Barrita de arriba principal que contiene a los enlaces ***********/
+header {
+    width: 100%;
+    height: 7%;
+    background-color: #1878f5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 100px;
+    position: fixed; /*Para que quede fija siempre arriba*/
+    z-index: 1000; /*Para que el menu siempre quede por encima de las fotos y todo*/
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    
+}
+
+.logo img {
+    display: block;
+    height: 70%;
+    padding: 5px 5px;
+    border-radius: 15px; /*Es para dar el efecto redondeado*/
+}
+
+
+
+.bars {
+    display: none;
+}
+
+.nav-bar {
+    display: flex;
+}
+
+/*Es para que los enlaces se coloquen de forma horizontal, ya que por default los deja de forma vertical */
+.nav-bar ul li{
+    position: relative;
+    float: left;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 15px;
+    transition: 0.2s;
+    margin: 0px 5px;
+}
+
+.nav-bar ul li a:hover {
+    color: #212127;
+    background-color: #ffe00e;
+}
+
+.nav-bar ul li a.active {
+    color: #212127;
+    background-color: #ffe00e;
+}
+
+
+/***********************************************************************************************************************************************************************************************************/
+/****************************************************************SECCION: IMG-FONDO******************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+
+.img-fondo {
+    background-image: linear-gradient(
+        rgba(136, 127, 127, 0.507),
+        rgba(77, 74, 74, 0.199)),
+        url(../img/carro_fondo.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;  /*para que no se repita la imagen*/
+    background-size: cover;
+    background-attachment: fixed; /*Hace el efecto de que la imagen se quede fija*/
+    padding: 100px 0px;
+    height: 100vh; /*ocupe el 100% del alto de la ventana*/
+}
+
+.principal {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.principal h1 {
+    margin: 0; /*Quita todo el espaciado que trae x defecto el h1*/
+    font-size: 70px;
+    color: #faf3f3;
+}
+
+.principal h2 {
+    margin: 0;
+    font-size: 40px;
+    color: #ddd9d9f1;
+}
+
+/**Clase para dar a los enlaces el estilo de botón*/
+.btn-pers {
+    display: inline-block; /*es para poder aplicar padding y margin*/
+    padding: 11px 35px;
+    background-color: #f8fc08;
+    color: #181717;
+    text-transform: uppercase;
+    margin-top: 40px;
+    text-decoration: none; /*Para quitar lo subrayado del enlace*/
+    transition: 1s; /*Es la trnasicion al dejar el mouse del link*/
+    border-radius: 15px; /*Efecto de bordes en la esquina*/
+}
+
+/*Al momento de pasar el mouse sobre el boton*/
+.btn-pers:hover {
+    /* background-color: #fff; */
+    /* background: linear-gradient(rgba(84,93,220,.94),rgba(96,171,245.9)); */
+     transition: 1s; /*Es la trnasicion al pasar el mouse del link*/
+     transform: scale(1.1); /*Es para hacer el efecto de que el boton se agrande al pasar el mouse*/
+     color: #181717;
+     font-weight: bold;
+     border-radius: 15px; /*Efecto de bordes en la esquina*/
+ }
+
+ /***********************************************************************************************************************************************************************************************************/
+/****************************************************************SECCION: SERVICIOS******************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+#services {
+    background-color: #1878f5;
+    padding: 50px 0px;
+    width: 100%;
+}
+
+.services-content {
+    max-width: 1200px; /*Al llegar a 1200 px centra el contenido*/
+    margin: 0 auto; /*Va  a hacer que se centre y se vea mas compacta la sección*/
+    text-align: center;
+    margin-bottom: 30px; /*seperacion hacia abajo*/
+}
+
+.services-content h2 {
+    font-size: 55px;
+    line-height: 70px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 50px; /*seperacion hacia abajo*/
+}
+
+.servicios-grupo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.servicio-1 {
+    padding: 0 50px;
+}
+.servicio-1 img {
+    width: auto; /*Con esta propiedad hacemos que el ancho de la imagen sea de acuerdo a lo que es*/
+    height: 30%;  /*Con esta propiedad hacemos que la imagen sea la misma altura que todas y se adapten al mismo contenedor*/
+   /* width: 100px;*/ /*esta es la propiedad de hacer mas grande o chica la imagen*/
+    margin-bottom: 25px;
+}
+
+.servicio-1 h3 {
+    color: #ffffff;
+    font-size: 23px;
+    margin-bottom: 25px;
+}
+.servicio-1 p {
+    color: #ffffff;
+    font-size: 19px;
+}
+
+/**************Seccion resultados******************/
+#resultados {
+    background-color: #727171;
+    padding: 30px 0px;
+    width: 100%;
+}
+
+.resultados-content {
+    padding: 30px 0; /*crea espacio extra dentro de un elemento  arriba, derecho, abajo, izquierdo*/
+    width: 90%;
+    max-width: auto;
+    margin: auto;
+    overflow: hidden; /*es para algo que se quiera salir de la clase o contenedor, se esconda*/
+    text-align: center;
+    margin-bottom: 25px; /*seperacion hacia abajo*/
+}
+
+.resultados-content h1 {
+    font-size: 55px;
+    line-height: 70px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 50px;
+    margin-bottom: 20px; /*seperacion hacia abajo*/
+}
+
+#resultado p {
+    margin: 0;
+    font-size: 30px;
+    color: #fff;
+    padding: 2rem;
+    border-bottom: 1px solid #e1e1e1;
+}
+#resultado p span {
+    
+    font-weight: bold;
+}
+#resultado p:last-of-type{
+    border: none;
+}
+
+/********************************SECCION BUSCADOR *********************/
+
+#buscador {
+    background-color: white;
+    padding: 30px 0px;
+    width: 100%;
+}
+
+.buscador-content {
+   /* background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;  
+    */
+
+    padding: 50px 20px 0px 0px; /*crea espacio extra dentro de un elemento  arriba, derecho, abajo, izquierdo*/
+    width: 30%;
+    max-width: auto;
+    margin: auto;
+    overflow: hidden; /*es para algo que se quiera salir de la clase o contenedor, se esconda*/
+    text-align: center;
+    margin-bottom: 25px; /*seperacion hacia abajo*/
+
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .buscador-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .filters {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .filter {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .search-button {
+    text-align: center;
+  }
+
+  /***************ALERTA de que no hay vehículos encontrados *******************************/
+  .alerta {
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    font-size: 2rem;
+}
+.error {
+    background-color: red;
+}
+
+/*****************estilo de la imagen de la tarjeta *******************/
+
+.imagen-tarjeta {
+    border: 5px solid #626364; /* Borde alrededor de la imagen */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 10px; /* Espacio entre la imagen y el borde */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el efecto de tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para interacciones */
+  }
+
+  /* Efecto al pasar el mouse */
+  .imagen-tarjeta:hover {
+    transform: scale(1.05); /* Ampliar un poco la imagen */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumentar la sombra al hacer hover */
+  }
+
+  .imagen-3d {
+    width: 380px;
+    height: 250px;
+    border: 5px solid #626364; /* Borde alrededor de la imagen */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 10px; /* Espacio entre la imagen y el borde */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra 3D */
+    transform: translateY(4px); /* Desplazamiento para dar sensación de profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para interacciones */
+    margin-bottom: 30px;
+  }
+
+  /* Efecto 3D al pasar el mouse */
+  .imagen-3d:hover {
+    transform: translateY(-6px) scale(1.3); /* Efecto de elevación y escala */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 6px 14px rgba(0, 0, 0, 0.15); /* Sombra más profunda */
+  }
+  
+
+  
+ /***********************************************************************************************************************************************************************************************************/
+/****************************************************************SECCION: LOGROS******************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+#logros {
+    background-color: #9fa8ad;
+    padding: 20px 0px;
+    width: 100%;
+}
+
+.logros-content {
+    padding: 30px 0; /*crea espacio extra dentro de un elemento  arriba, derecho, abajo, izquierdo*/
+    width: 90%;
+    max-width: auto;
+    margin: auto;
+    overflow: hidden; /*es para algo que se quiera salir de la clase o contenedor, se esconda*/
+    text-align: center;
+    margin-bottom: 25px; /*seperacion hacia abajo*/
+}
+
+
+.logros-content h2 {
+    font-size: 55px;
+    line-height: 70px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 50px; /*seperacion hacia abajo*/
+}
+
+.logros-content h4 {
+    font-size: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+
+.galeria_fotos_logros {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;  /*Es para que los elementos se distribuyan en varias lineas, y no se junten en una sola*/
+}
+
+
+.container {
+    width: 500px;  /*Define el tamaño de cada imagen a ocupar en todo el contenedor*/
+    margin: 10px 5px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer; /*Para que aparezca la manita al poner el cursor sobre la imagen*/
+    
+}
+
+.container img{
+    width: 100%; /*Con esta propiedad hacemos que la imagen sea la misma ancho que todas y se adapten al mismo contenedor*/
+    height: 100%;  /*Con esta propiedad hacemos que la imagen sea la misma altura que todas y se adapten al mismo contenedor*/
+    transition: all .5s;
+    object-fit: cover; /*Se ajusta a la medida la imagen al recuadro*/
+    display: block; 
+}
+
+/*Es para mostrar el efecto al pasar el mouse sobre la imagen*/
+.container:hover img {
+    transform: scale(1.09);
+}
+
+.container .content {
+    background: rgba(0,0,0,.7);
+    position: absolute;
+    top: -100%;
+    left: 0;
+    text-align: justify;
+    height: 100%;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.content h3 {
+    text-align: center;
+    font-size: 25px;
+    border-bottom: 1px solid #808080;
+    padding: 0 10px 20px 10px;
+}
+
+.content p {
+    padding: 0 20px 15px 20px;
+    border-bottom: 1px solid #808080;
+}
+
+.container:hover .content {
+    top:0;
+}
+
+
+ /***********************************************************************************************************************************************************************************************************/
+/****************************************************************SECCION: Nuestros trabajos******************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+#mis_trabajos {
+    background-color: #1878f5;
+    padding: 30px 0px;
+    width: 100%;
+}
+
+.mis_trabajos_content {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    text-align: center;
+    margin-bottom: 60px; 
+   
+}
+.mis_trabajos_content h2 {
+    font-size: 55px;
+    line-height: 70px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 50px; /*seperacion hacia abajo*/
+}
+
+.mis_trabajos_content p {
+    font-size: 30px;
+    color: #ddd9d9f1;
+    margin-bottom: 25px;
+}
+
+/******Estilos de las fechas del carrusel*****/
+span {
+    font-size: 80px;
+    color: #fff;
+}
+
+.owl-nav {
+    text-align: center;
+}
+
+.owl-carousel img {
+    height: 30%; /*Para ajustar el alto de la imagen igual para todas*/
+    width: 50%; /*Para ajustar el ancho de todas las imagenes por igual*/
+    transition: all .5s;
+    object-fit: cover; /*Se ajusta a la medida la imagen al recuadro*/
+    display: block; 
+
+}
+
+
+/***********************************************************************************************************************************************************************************************************/
+/****************************************************************SECCION: Nosotros******************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+#nosotros {
+    background-color: #9fa8ad;
+    padding: 50px 0px;
+    width: 100%;
+
+}
+
+.nosotros-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.recuadro {
+    background-color: #1878f5;
+    padding: 50px 0px;
+    width: 100%;
+    margin: 0px 60px;
+    line-height: auto;
+    border-radius: 30px; /*Dar efecto en las esquinas redondeado*/
+    
+}
+
+.recuadro h2 {
+    font-size: 55px;
+    line-height: 70px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.linea-horizontal {
+    margin-bottom: 30px;
+    width: 100%;
+    display: inline-block;
+    width: 50px;
+    border: none;
+    border-top: 5px solid #ffffff;
+}
+
+.recuadro p {
+    font-size: 20px;
+    color: #e4e0e0;
+    text-align: justify;
+    padding: 0% 10%; /*Que tenga espacio al 10% izq y derecha*/
+    margin-bottom: 25px;
+}
+
+
+/***********************************************************************************************************************************************************************************************************/
+/****************************************************************SECCION: Contacto******************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+#contacto {
+    background-color: #9fa8ad;
+    padding: 30px 0px;
+    width: 100%;
+}
+
+.contacto-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.img_carro_contacto {
+    padding: 10px 0px;
+    width: 100%;
+    margin: 0px 60px;
+    line-height: auto;
+    
+}
+
+.recuadro_contacto {
+    background-color: #1878f5;
+    padding: 50px 0px;
+    width: 100%;
+    margin: 0px 60px;
+    line-height: auto;
+    border-radius: 30px; /*Dar efecto en las esquinas redondeado*/
+}
+
+.recuadro_contacto h2 {
+    font-size: 40px;
+    line-height: 70px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.recuadro_contacto h4 {
+    font-size: 25px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+/***********************************************************************************************************************************************************************************************************/
+/****************************************************************SECCION: FOOTER****************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+
+.footer {
+    background-color: #727171;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer-content h3{
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.enlaces_footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.enlaces_footer ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.enlaces_footer ul li {
+    margin: 15px 20px;
+}
+
+.enlaces_footer ul li a img {
+    width: 70%;
+    height: 10%;  /*Con esta propiedad hacemos que la imagen sea la misma altura que todas y se adapten al mismo contenedor*/
+    margin-bottom: 25px;
+
+}
+
+/*************************************************************WHATSUP FIJO*************************************************************/
+#wazaa a {
+    background: none; /*quitar el fondo que tiene por defecto*/
+    position: fixed; /*qie elemento suposicion quede fijo*/
+    top: 85%; /*Decirle en que posicion quede, pero solo cuando position: fixed*/
+    right: 1%; /*que quede 1% a la derecha, tambien se puede usar en px, pero solo se usa cuando position: fixed*/
+}
+
+
+
+
+
+
+
+
+
+ /***********************************************************************************************************************************************************************************************************/
+/****************************************************************ESTILOS PARA RESPONSIVE******************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+
+@media(max-width:800px) {
+    header {
+        padding: 0px 30px;
+        height: 10%;
+    }
+ /***************Configuracion de las barritas para que aparezcan y desplazarnos en el menu*/
+    .bars {
+        display: block;
+        cursor: pointer;
+    }
+
+    .bars .line {
+        width: 30px;
+        height: 3px;
+        background-color: #dee4e4; /*Es el color de las barritas que se muestran para hacer click y navegar*/
+        margin: 6px 6px;
+    }
+
+    .nav-bar {
+        height: 0px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: #1878f5; /*Es el color que se despliega al hacer click en las barritas de navegacion*/
+        transition: 0.5s;
+        overflow: hidden; /*para ocultarlo y no se muestren los enlaces*/
+    }
+
+    .nav-bar.active {
+        height: 450px;
+    }
+
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+      /*Es para que los enlaces se hagan para abajo*/
+      .nav-bar ul li{
+        position: relative;
+        float: unset;
+    }
+
+    .nav-bar.active ul{
+        opacity: 1;
+    }
+
+    .nav-bar ul li a{
+        margin-bottom: 20px;
+    }
+
+
+    .principal h1 {
+        font-size: 35px;
+    }
+    
+    .principal h2 {
+        font-size: 16px;
+    }
+
+        /********************SECCION SERVICIOS *********************/
+
+    #services {
+        padding: 30px;
+    }
+
+    .servicios-grupo {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .servicio-1 {
+        margin-bottom: 25px;
+    }
+
+    /********************SECCION LOGROS *********************/
+
+    .container {
+        width: 1000px;  /*Define el tamaño de cada imagen a ocupar en todo el contenedor*/
+        margin: 0px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer; /*Para que aparezca la manita al poner el cursor sobre la imagen*/
+        
+    }
+
+    .container img{
+        padding-bottom: 15px;
+    }
+
+    .logros-content h4 {
+        font-size: 15px;
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+
+    /******************SECCION MIS TRABAJOS*************************/
+
+    .mis_trabajos_content h2 {
+        font-size: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .mis_trabajos_content p {
+        font-size: 20px;
+        color: #ddd9d9f1;
+        margin-bottom: 25px;
+    }
+
+  
+/******************SECCION NOSOTROS*************************/
+    .recuadro {
+        width: auto;
+        line-height: auto;
+        padding-top: 5px;
+        
+    }
+
+    .recuadro h2 {
+        font-size: 20px;
+        margin-bottom: 0px;
+
+    }
+
+    .linea-horizontal {
+        margin-bottom: 15px;
+    }
+
+    .recuadro p {
+        font-size: 14px;
+        margin-bottom: 12px;
+        margin-top: 12px;
+    }
+
+    /******************SECCION CONTACTO*************************/
+
+
+    .img_carro_contacto {
+   
+        width: auto;
+        height: auto;
+        line-height: auto;
+        margin: 0px -35px;
+ 
+    }
+
+    .recuadro_contacto {
+        width: auto;
+        line-height: auto;
+        padding-top: 5px;
+        padding-bottom: 20px; /*Para hacer mas chico el recuadro hacia abajo*/
+    }
+
+    .recuadro_contacto h2 {
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+
+    .recuadro_contacto h4 {
+        font-size: 14px;
+        margin-bottom: 12px;
+        margin-top: 12px;
+    }
+
+    /**************************************FOOTER***********************************/
+    .footer {
+        margin-bottom: 50px;    
+    }
+
+    .footer-content h3{
+        font-size: 17px;
+        color: #ffffff;
+        margin-bottom: 15px;
+    }
+
+    .enlaces_footer ul li a img {
+        width: 40%;
+        height: 10%;  /*Con esta propiedad hacemos que la imagen sea la misma altura que todas y se adapten al mismo contenedor*/
+    
+    }
+
+    /*********************************whatsup*****************************************/
+    #wazaa a {
+        background: none; /*quitar el fondo que tiene por defecto*/
+        position: fixed; /*qie elemento suposicion quede fijo*/
+        top: 60%; /*Decirle en que posicion quede, pero solo cuando position: fixed*/
+        right: 0.5%; /*que quede 1% a la derecha, tambien se puede usar en px, pero solo se usa cuando position: fixed*/
+    }
+
+    #wazaa img {
+        width: 50%;
+    }
+
+
+    /****************************************BUSCADOR **********************************************/
+
+    #buscador {
+        background-color: white;
+        padding: 30px 0px;
+        width: 100%;
+    }
+    
+    .buscador-content {
+    
+        padding: 50px 20px 0px 0px; /*crea espacio extra dentro de un elemento  arriba, derecho, abajo, izquierdo*/
+        width: 50%;
+        max-width: auto;
+        margin: auto;
+        overflow: hidden; /*es para algo que se quiera salir de la clase o contenedor, se esconda*/
+        text-align: center;
+        margin-bottom: 25px; /*seperacion hacia abajo*/
+    
+      }
+      
+    /*************************************RESULTADOS*******************************************/
+    .resultados-content h1 {
+        font-size: 40px;
+        line-height: 50px;
+        color: #fff;
+        text-transform: uppercase;
+        margin-top: 50px;
+        margin-bottom: 20px; /*seperacion hacia abajo*/
+    }
+    
+    #resultado p {
+        margin: 0;
+        font-size: 14px;
+        color: #fff;
+        padding: 2rem;
+        border-bottom: 1px solid #e1e1e1;
+    }
+
+    /********************************Imagenes de resultados *************************/
+    .imagen-3d {
+        width: 280px;
+        height: 180px;
+        border: 5px solid #626364; /* Borde alrededor de la imagen */
+        border-radius: 15px; /* Bordes redondeados */
+        padding: 5px; /* Espacio entre la imagen y el borde */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra 3D */
+        transform: translateY(4px); /* Desplazamiento para dar sensación de profundidad */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para interacciones */
+        margin-bottom: 30px;
+      }
+    
+      /* Efecto 3D al pasar el mouse */
+      .imagen-3d:hover {
+        transform: translateY(-6px) scale(1.3); /* Efecto de elevación y escala */
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 6px 14px rgba(0, 0, 0, 0.15); /* Sombra más profunda */
+      }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
